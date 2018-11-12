@@ -50,7 +50,7 @@ namespace _10Nov
         static int[] TeamplayerScorce = new int[10];
         static int[] TeamplayerScorceA = new int[10];
         static int[] TeamplayerScorceB = new int[10];
-        static int AvgTeamScorce1, AvgTeamScorce2, AvgTeamScorceA, AvgTeamScorceB, MaxScorcePerTeam = 0, MaxScorceA, MaxScorceB,sum=0, TotalNoOfPlayersTeamA, TotalNoOfPlayersTeamB, TotalNosPlayers;
+        static int AvgTeamScorce1, AvgTeamScorce2, AvgTeamScorceA, AvgTeamScorceB, MaxScorcePerTeam = 0, MaxScorceA, MaxScorceB,sum, TotalNoOfPlayersTeamA, TotalNoOfPlayersTeamB, TotalNosPlayers;
         static string ManOfTheTeamA = " ";
         static string ManOfTheTeamB = " ";
         static string ManOfTheTeam = " ";
@@ -63,12 +63,13 @@ namespace _10Nov
             Console.WriteLine("ENTER 1 TO ENTRY PLAYERS DETAILS");
             Console.WriteLine("ENTER 2 TO VIEW PLAYERS DETAILS");
             int Input = int.Parse(Console.ReadLine());
-            Console.ReadLine();
+
             if (Input == 1)
                 WriteTeamPlayersInfo();
-            else
+            else if (Input == 2)
+            {
                 DisplayTeamDetails();
-
+            }
         }
 
         public static void TeamPlayersInfo(char Team)
@@ -82,6 +83,7 @@ namespace _10Nov
             {
                 for (int i = 0; i < TotalNosPlayers; i++)
                 {
+                    sum = 0;
                     Console.WriteLine("ENTER THE NAME OF THE TEAM" + Team + "PLAYER");
                     TeamplayersName[i] = Console.ReadLine();
                     Console.WriteLine();
@@ -115,8 +117,7 @@ namespace _10Nov
         public static void WriteTeamPlayersInfo()
         {
         begin:
-            Console.WriteLine("ENTER 1 FOR TEAM "+"A");
-            
+            Console.WriteLine("ENTER 1 FOR TEAM "+"A");   
             Console.WriteLine("ENTER 2 FOR TEAM "+"B");
             int Readinput = int.Parse(Console.ReadLine());
             if (Readinput == 1)
@@ -134,7 +135,7 @@ namespace _10Nov
                     TeamplayerScorceA[i] = TeamplayerScorce[i];
                 }
             }
-            else
+            else if(Readinput==2)
             {
                 int AvgTeamScorce2;
                 TeamPlayersInfo('B');
@@ -150,8 +151,10 @@ namespace _10Nov
                     TeamplayerScorceB[i] = TeamplayerScorce[i];
                 }
             }
-            goto begin;
-
+            Console.WriteLine("ENTER 3 TO CONTINUE ENTRING THE PLAYERS DETAILS");
+            if (Readinput == 3)
+                goto begin;
+            MainFuncionForCricket();
         }
 
 
@@ -199,7 +202,7 @@ namespace _10Nov
             Console.WriteLine();
             Console.WriteLine("ENTER 2 FOR HOSPITAL");
             Console.WriteLine();
-            Console.WriteLine("ENTER 3 FOR INSTITUTION");
+            Console.WriteLine("ENTER 3 FOR CRICKET");
             Console.WriteLine();
             int ReadChoice = int.Parse(Console.ReadLine());
             switch (ReadChoice)
