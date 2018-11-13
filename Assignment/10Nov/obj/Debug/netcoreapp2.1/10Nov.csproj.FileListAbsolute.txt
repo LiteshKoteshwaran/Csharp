@@ -1,0 +1,11 @@
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.csproj.CoreCompileInputs.cache
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.AssemblyInfoInputs.cache
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.AssemblyInfo.cs
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.csprojAssemblyReference.cache
+D:\Practice\Assignment\10Nov\bin\Debug\netcoreapp2.1\10Nov.deps.json
+D:\Practice\Assignment\10Nov\bin\Debug\netcoreapp2.1\10Nov.runtimeconfig.json
+D:\Practice\Assignment\10Nov\bin\Debug\netcoreapp2.1\10Nov.runtimeconfig.dev.json
+D:\Practice\Assignment\10Nov\bin\Debug\netcoreapp2.1\10Nov.dll
+D:\Practice\Assignment\10Nov\bin\Debug\netcoreapp2.1\10Nov.pdb
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.dll
+D:\Practice\Assignment\10Nov\obj\Debug\netcoreapp2.1\10Nov.pdb

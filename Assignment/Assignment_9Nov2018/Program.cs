@@ -1,0 +1,644 @@
+﻿using System;
+
+namespace Assignment_9Nov2018
+{
+    class Program
+    {
+        static int a, b, c, d, e, f, g, na, nb, nc, nd, ne, nf, ng;
+        static string First_Student_name, Second_Student_name, Third_Student_name, Fourth_Student_name, Fifth_Student_name, Sixth_Student_name, Seventh_Student_name;
+        static string First_Student_course, Second_Student_course, Third_Student_course, Fourth_Student_course, Fifth_Student_course, Sixth_Student_course, Seventh_Student_course;
+        static int First_Student_course_fee, Second_Student_course_fee, Third_Student_course_fee, Fourth_Student_course_fee, Fifth_Student_course_fee, Sixth_Student_course_fee, Seventh_Student_course_fee;
+        static int Course1_fee, Course2_fee, Course3_fee, i = 0;
+        static string Course1, Course2, Course3, Course1_duration, Course2_duration, Course3_duration;
+        static string Enquirer1_name, Enquirer2_name, Enquirer3_name;
+        static string a1, a2, a3, a4, a5, a6, a7;
+        static string Enquirer1_course_name, Enquirer2_course_name, Enquirer3_course_name;
+        static int Enquirer1, Enquirer2, Enquirer3;
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("ENTER 1 TO WRITE");
+            Console.WriteLine();
+            Console.WriteLine("ENTER 2 TO READ");
+            Console.WriteLine();
+            int a = int.Parse(Console.ReadLine());
+            if (a == 1)
+            {
+                write_course_details();
+                enquirer_details();
+                write_fee_structure();
+                diplay();
+            }
+            else if (a == 2)
+            {
+                diplay();
+            }
+
+        }
+        static void diplay()
+        {
+            read_course_details();
+            details_of_students_joined();
+            read_enquirer_details();
+        }
+
+
+        public static void write_course_details()
+        {
+            Console.WriteLine("ENTER THE NAME OF THE FIRST COURSE");
+            Course1 = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NAME OF THE SECOND COURSE");
+            Course2 = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NAME OF THE THIRD COURSE");
+            Course3 = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE FEE AMOUNT OF THE FIRST COURSE");
+            Course1_fee = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE FEE AMOUNT OF THE SECOND COURSE");
+            Course2_fee = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE FEE AMOUNT OF THE THIRD COURSE");
+            Course3_fee = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE DURATION OF THE FIRST COURSE");
+            Course1_duration = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE DURATION OF THE SECOND COURSE");
+            Course2_duration = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE DURATION OF THE THIRD COURSE");
+            Course3_duration = Console.ReadLine();
+            Console.WriteLine();
+        }
+
+        public static void enquirer_details()
+        {
+
+            Console.WriteLine("ENTER THE NAME OF THE ENQUIRER");
+            Enquirer1_name = Console.ReadLine(); i++;
+            Console.WriteLine("ENTER THE NAME OF THE ENQUIRER");
+            Enquirer2_name = Console.ReadLine(); i++;
+            Console.WriteLine("ENTER THE NAME OF THE ENQUIRER");
+            Enquirer3_name = Console.ReadLine(); i++;
+
+
+            Console.WriteLine("ENTER THE NOS. OF COURSES " + Enquirer1_name + " HAS ENQUIRED");
+            Enquirer1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("ENTER THE NAME OF THE COURSE HE HAS ENQUIRED");
+            Enquirer1_course_name = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE NOS. OF COURSES " + Enquirer2_name + " HAS ENQUIRED");
+            Enquirer2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("ENTER THE NAME OF THE COURSE HE HAS ENQUIRED");
+            Enquirer2_course_name = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE NOS. OF COURSES " + Enquirer3_name + " HAS ENQUIRED");
+            Enquirer3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("ENTER THE NAME OF THE COURSE HE HAS ENQUIRED");
+            Enquirer3_course_name = Console.ReadLine();
+
+
+        }
+
+        public static void write_fee_structure()
+        {
+            Console.WriteLine("ENTER THE NO OF STUDENTS YOU WANT TO ENTER ");
+            Console.WriteLine();
+            int aa = int.Parse(Console.ReadLine());
+            Console.WriteLine("ENTER " + aa + " STUDENTS DETAILS");
+
+            Console.WriteLine("ENTER THE NAME OF FIRST STUDENT");
+            string First_Student_name = Console.ReadLine();
+
+            Console.WriteLine("ENTER THE ID OF THE FIRST STUDENT");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int na = int.Parse(Console.ReadLine());
+            if (na > 3)
+            {
+                if (na == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string First_Student_course = Console.ReadLine();
+                    if (First_Student_course == Course1)
+                    {
+                        First_Student_course_fee = Course1_fee;
+                    }
+                    if (First_Student_course == Course2)
+                    {
+                        First_Student_course_fee = Course2_fee;
+                    }
+                    if (First_Student_course == Course3)
+                    {
+                        First_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + First_Student_course + " IS" + First_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + First_Student_course + " IS " + First_Student_course_fee);
+                    a1 = First_Student_course;
+                }
+                if (na == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string First_Student_course1 = Console.ReadLine();
+                    string First_Student_course2 = Console.ReadLine();
+                    if (First_Student_course1 == Course1 && First_Student_course2 == Course2)
+                    {
+                        First_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (First_Student_course1 == Course2 && First_Student_course2 == Course3)
+                    {
+                        First_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (First_Student_course1 == Course3 && First_Student_course2 == Course1)
+                    {
+                        First_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + First_Student_course1 + " , " + First_Student_course2 + " IS" + First_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + First_Student_course + " IS " + First_Student_course_fee);
+                    a1 = First_Student_course1 + First_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string First_Student_course1 = Console.ReadLine();
+                    string First_Student_course2 = Console.ReadLine();
+                    string First_Student_course3 = Console.ReadLine();
+
+                    First_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + First_Student_course1 + " , " + First_Student_course2 + " , " + First_Student_course3 + " IS" + First_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + First_Student_course + " IS " + First_Student_course_fee);
+                    a1 = First_Student_course1 + First_Student_course2 + First_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF SECOND STUDENT");
+            string Second_Student_name = Console.ReadLine();
+
+            Console.WriteLine("ENTER THE ID OF THE SECOND STUDENT");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int nb = int.Parse(Console.ReadLine());
+            if (nb > 3)
+            {
+                if (nb == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Second_Student_course = Console.ReadLine();
+                    if (Second_Student_course == Course1)
+                    {
+                        Second_Student_course_fee = Course1_fee;
+                    }
+                    if (Second_Student_course == Course2)
+                    {
+                        Second_Student_course_fee = Course2_fee;
+                    }
+                    if (Second_Student_course == Course3)
+                    {
+                        Second_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Second_Student_course + " IS" + Second_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Second_Student_course + " IS " + Second_Student_course_fee);
+                    a2 = Second_Student_course;
+                }
+                if (nb == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Second_Student_course1 = Console.ReadLine();
+                    string Second_Student_course2 = Console.ReadLine();
+
+                    if (Second_Student_course1 == Course1 && Second_Student_course2 == Course2)
+                    {
+                        Second_Student_course_fee = Course1_fee + Course2_fee;
+                    }
+                    if (Second_Student_course1 == Course2 && Second_Student_course2 == Course3)
+                    {
+                        Second_Student_course_fee = Course2_fee + Course3_fee;
+                    }
+                    if (Second_Student_course1 == Course3 && Second_Student_course2 == Course1)
+                    {
+                        Second_Student_course_fee = Course3_fee + Course1_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Second_Student_course1 + ", " + Second_Student_course2 + " IS" + Second_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Second_Student_course1 + "and " + Second_Student_course2 + " IS " + First_Student_course_fee);
+                    a2 = Second_Student_course1 + Second_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Second_Student_course1 = Console.ReadLine();
+                    string Second_Student_course2 = Console.ReadLine();
+                    string Second_Student_course3 = Console.ReadLine();
+
+                    Second_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Second_Student_course1 + ", " + Second_Student_course2 + ", " + Second_Student_course3 + " IS" + Second_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Second_Student_course1 + ", " + Second_Student_course2 + "and " + Second_Student_course3 + " IS " + Second_Student_course_fee);
+                    a2 = Second_Student_course1 + Second_Student_course2 + Second_Student_course3;
+
+                }
+            }
+            Console.WriteLine("Enter the value below 3");
+
+
+
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF THIRD STUDENT");
+            string Third_Student_name = Console.ReadLine();
+            Console.WriteLine("ENTER THE ID OF THE THIRD STUDENT");
+            int c = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int nc = int.Parse(Console.ReadLine());
+            if (nc > 3)
+            {
+                if (nc == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Third_Student_course = Console.ReadLine();
+                    if (Third_Student_course == Course1)
+                    {
+                        Third_Student_course_fee = Course1_fee;
+                    }
+                    if (Third_Student_course == Course2)
+                    {
+                        Third_Student_course_fee = Course2_fee;
+                    }
+                    if (Third_Student_course == Course3)
+                    {
+                        Third_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Third_Student_course + " IS" + Third_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Third_Student_course + " IS " + Third_Student_course_fee);
+                    a3 = Third_Student_course;
+                }
+                if (nc == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Third_Student_course1 = Console.ReadLine();
+                    string Third_Student_course2 = Console.ReadLine();
+                    if (Third_Student_course1 == Course1 && Third_Student_course2 == Course2)
+                    {
+                        Third_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (Third_Student_course1 == Course2 && Third_Student_course2 == Course3)
+                    {
+                        Third_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (Third_Student_course1 == Course3 && Third_Student_course2 == Course1)
+                    {
+                        Third_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Third_Student_course1 + " , " + Third_Student_course2 + " IS" + Third_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Third_Student_course1 + ", " + Third_Student_course + " IS " + Third_Student_course_fee);
+                    a3 = Third_Student_course1 + Third_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Third_Student_course1 = Console.ReadLine();
+                    string Third_Student_course2 = Console.ReadLine();
+                    string Third_Student_course3 = Console.ReadLine();
+
+                    Third_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Third_Student_course1 + " , " + Third_Student_course2 + " , " + Third_Student_course3 + " IS" + Third_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Third_Student_course1 + " , " + Third_Student_course2 + " , " + Third_Student_course3 + " IS " + Third_Student_course_fee);
+                    a3 = Third_Student_course1 + Third_Student_course2 + Third_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF FOURTH STUDENT");
+            string Fourth_Student_name = Console.ReadLine();
+            Console.WriteLine("ENTER THE ID OF THE FOURTH STUDENT");
+            int d = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int nd = int.Parse(Console.ReadLine());
+            if (nd > 3)
+            {
+                if (nd == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Fourth_Student_course = Console.ReadLine();
+                    if (Fourth_Student_course == Course1)
+                    {
+                        Fourth_Student_course_fee = Course1_fee;
+                    }
+                    if (Fourth_Student_course == Course2)
+                    {
+                        Fourth_Student_course_fee = Course2_fee;
+                    }
+                    if (Fourth_Student_course == Course3)
+                    {
+                        Fourth_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fourth_Student_course + " IS" + Fourth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fourth_Student_course + " IS " + Fourth_Student_course_fee);
+                    a4 = Fourth_Student_course;
+                }
+                if (nd == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Fourth_Student_course1 = Console.ReadLine();
+                    string Fourth_Student_course2 = Console.ReadLine();
+                    if (Fourth_Student_course1 == Course1 && Fourth_Student_course2 == Course2)
+                    {
+                        Fourth_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (Fourth_Student_course1 == Course2 && Fourth_Student_course2 == Course3)
+                    {
+                        Fourth_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (Fourth_Student_course1 == Course3 && Fourth_Student_course2 == Course1)
+                    {
+                        Fourth_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fourth_Student_course1 + " , " + Fourth_Student_course2 + " IS" + Fourth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fourth_Student_course1 + " , " + Fourth_Student_course2 + " IS " + Fourth_Student_course_fee);
+                    a4 = Fourth_Student_course1 + Fourth_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Fourth_Student_course1 = Console.ReadLine();
+                    string Fourth_Student_course2 = Console.ReadLine();
+                    string Fourth_Student_course3 = Console.ReadLine();
+
+                    Fourth_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fourth_Student_course1 + " , " + Fourth_Student_course2 + " , " + Fourth_Student_course3 + " IS" + Fourth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fourth_Student_course1 + " , " + Fourth_Student_course2 + " , " + Fourth_Student_course3 + " IS " + Fourth_Student_course_fee);
+                    a4 = Fourth_Student_course1 + Fourth_Student_course2 + Fourth_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF FIFTH STUDENT");
+            string Fifth_Student_name = Console.ReadLine();
+            Console.WriteLine("ENTER THE ID OF THE FIFTH STUDENT");
+            int e = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int ne = int.Parse(Console.ReadLine());
+            if (ne > 3)
+            {
+                if (ne == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Fifth_Student_course = Console.ReadLine();
+                    if (Fifth_Student_course == Course1)
+                    {
+                        Fifth_Student_course_fee = Course1_fee;
+                    }
+                    if (Fifth_Student_course == Course2)
+                    {
+                        Fifth_Student_course_fee = Course2_fee;
+                    }
+                    if (Fifth_Student_course == Course3)
+                    {
+                        Fifth_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fifth_Student_course + " IS" + Fifth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fifth_Student_course + " IS " + Fifth_Student_course_fee);
+                    a5 = Fifth_Student_course;
+                }
+                if (ne == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Fifth_Student_course1 = Console.ReadLine();
+                    string Fifth_Student_course2 = Console.ReadLine();
+                    if (Fifth_Student_course1 == Course1 && Fifth_Student_course2 == Course2)
+                    {
+                        Fifth_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (Fifth_Student_course1 == Course2 && Fifth_Student_course2 == Course3)
+                    {
+                        Fifth_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (Fifth_Student_course1 == Course3 && Fifth_Student_course2 == Course1)
+                    {
+                        Fifth_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fifth_Student_course1 + " , " + Fifth_Student_course2 + " IS" + Fifth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fifth_Student_course + " IS " + Fifth_Student_course_fee);
+                    a5 = Fifth_Student_course1 + Fifth_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Fifth_Student_course1 = Console.ReadLine();
+                    string Fifth_Student_course2 = Console.ReadLine();
+                    string Fifth_Student_course3 = Console.ReadLine();
+
+                    Fifth_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Fifth_Student_course1 + " , " + Fifth_Student_course2 + " , " + Fifth_Student_course3 + " IS" + Fifth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Fifth_Student_course1 + " , " + Fifth_Student_course2 + " , " + Fifth_Student_course3 + " IS " + Fifth_Student_course_fee);
+                    a5 = Fifth_Student_course1 + Fifth_Student_course2 + Fifth_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF SIXTH STUDENT");
+            string Sixth_Student_name = Console.ReadLine();
+            Console.WriteLine("ENTER THE ID OF THE SIXTH STUDENT");
+            int f = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int nf = int.Parse(Console.ReadLine());
+            if (nf > 3)
+            {
+                if (ne == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Sixth_Student_course = Console.ReadLine();
+                    if (Sixth_Student_course == Course1)
+                    {
+                        Sixth_Student_course_fee = Course1_fee;
+                    }
+                    if (Sixth_Student_course == Course2)
+                    {
+                        Sixth_Student_course_fee = Course2_fee;
+                    }
+                    if (Sixth_Student_course == Course3)
+                    {
+                        Sixth_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Sixth_Student_course + " IS" + Sixth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Sixth_Student_course + " IS " + Sixth_Student_course_fee);
+                    a6 = Sixth_Student_course;
+                }
+                if (ne == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Sixth_Student_course1 = Console.ReadLine();
+                    string Sixth_Student_course2 = Console.ReadLine();
+                    if (Sixth_Student_course1 == Course1 && Sixth_Student_course2 == Course2)
+                    {
+                        Sixth_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (Sixth_Student_course1 == Course2 && Sixth_Student_course2 == Course3)
+                    {
+                        Sixth_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (Sixth_Student_course1 == Course3 && Sixth_Student_course2 == Course1)
+                    {
+                        Sixth_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Sixth_Student_course1 + " , " + Sixth_Student_course2 + " IS" + Sixth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Sixth_Student_course1 + " , " + Sixth_Student_course2 + " IS " + Sixth_Student_course_fee);
+                    a6 = Sixth_Student_course1 + Sixth_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Sixth_Student_course1 = Console.ReadLine();
+                    string Sixth_Student_course2 = Console.ReadLine();
+                    string Sixth_Student_course3 = Console.ReadLine();
+
+                    Fifth_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Sixth_Student_course1 + " , " + Sixth_Student_course2 + " , " + Sixth_Student_course3 + " IS" + Sixth_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Sixth_Student_course1 + " , " + Sixth_Student_course2 + " , " + Sixth_Student_course3 + " IS " + Sixth_Student_course_fee);
+                    a6 = Sixth_Student_course1 + Sixth_Student_course2 + Sixth_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            Console.WriteLine("ENTER THE NAME OF SEVENTH STUDENT");
+            string Seventh_Student_name = Console.ReadLine();
+            Console.WriteLine("ENTER THE ID OF THE SEVENTH STUDENT");
+            int g = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("ENTER THE NO. OF COURSES HE HAS TAKEN");
+            int ng = int.Parse(Console.ReadLine());
+            if (ng > 3)
+            {
+                if (ng == 1)
+                {
+                    Console.WriteLine("ENTER THE NAME OF COURSE WHICH HE HAS TAKEN");
+                    string Seventh_Student_course = Console.ReadLine();
+                    if (Seventh_Student_course == Course1)
+                    {
+                        Seventh_Student_course_fee = Course1_fee;
+                    }
+                    if (Seventh_Student_course == Course2)
+                    {
+                        Seventh_Student_course_fee = Course2_fee;
+                    }
+                    if (Seventh_Student_course == Course3)
+                    {
+                        Seventh_Student_course_fee = Course3_fee;
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Seventh_Student_course + " IS" + Seventh_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Seventh_Student_course + " IS " + Seventh_Student_course_fee);
+                    a7 = Seventh_Student_course;
+                }
+                if (ng == 2)
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Seventh_Student_course1 = Console.ReadLine();
+                    string Seventh_Student_course2 = Console.ReadLine();
+                    if (Seventh_Student_course1 == Course1 && Seventh_Student_course2 == Course2)
+                    {
+                        Seventh_Student_course_fee = (Course1_fee + Course2_fee);
+                    }
+                    if (Seventh_Student_course1 == Course2 && Seventh_Student_course2 == Course3)
+                    {
+                        Seventh_Student_course_fee = (Course2_fee + Course3_fee);
+                    }
+                    if (Seventh_Student_course1 == Course3 && Seventh_Student_course2 == Course1)
+                    {
+                        Seventh_Student_course_fee = (Course3_fee + Course1_fee);
+                    }
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Seventh_Student_course1 + " , " + Seventh_Student_course2 + " IS" + Seventh_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Seventh_Student_course1 + ", " + Seventh_Student_course2 + " IS " + Seventh_Student_course_fee);
+                    a7 = Seventh_Student_course1 + Seventh_Student_course2;
+                }
+                else
+                {
+                    Console.WriteLine("ENTER THE NAMES OF COURSE WHICH HE HAS TAKEN");
+                    string Seventh_Student_course1 = Console.ReadLine();
+                    string Seventh_Student_course2 = Console.ReadLine();
+                    string Seventh_Student_course3 = Console.ReadLine();
+
+                    Seventh_Student_course_fee = (Course1_fee + Course2_fee + Course2_fee);
+
+                    Console.WriteLine("THE FEE FOR THE COURSE " + Seventh_Student_course1 + " , " + Seventh_Student_course2 + " , " + Seventh_Student_course3 + " IS" + Seventh_Student_course_fee);
+                    Console.WriteLine("THE AMOUNT PIAD FOR THE COURSE " + Seventh_Student_course1 + ", " + Seventh_Student_course2 + ", " + Seventh_Student_course3 + " IS " + Seventh_Student_course_fee);
+                    a7 = Seventh_Student_course1 + Seventh_Student_course2 + Seventh_Student_course3;
+                }
+
+            }
+            Console.WriteLine("Enter the value below 3");
+
+        }
+
+        public static void details_of_students_joined()
+        {
+            Console.WriteLine("STUDENT NAME             STUDENT ID              NOS OF COURSE TAKEN             NAMES OF THEM");
+            Console.WriteLine(First_Student_name + a + na + a1);
+            Console.WriteLine(Second_Student_name + b + nb + a2);
+            Console.WriteLine(Third_Student_name + c + nc + a3);
+            Console.WriteLine(Fourth_Student_name + d + nd + a4);
+            Console.WriteLine(Fifth_Student_name + e + ne + a5);
+            Console.WriteLine(Sixth_Student_name + f + nf + a6);
+            Console.WriteLine(Seventh_Student_name + g + ng + a7);
+            Console.ReadLine();
+        }
+
+        public static void read_course_details()
+        {
+            Console.WriteLine("COURSE NAME              COURSE FEE              COURSE DURATION");
+            Console.WriteLine(Course1 + Course1_fee + Course1_duration);
+            Console.WriteLine(Course2 + Course2_fee + Course2_duration);
+            Console.WriteLine(Course3 + Course3_fee + Course3_duration);
+            Console.ReadLine();
+        }
+
+        public static void read_enquirer_details()
+        {
+            Console.WriteLine("ENQUIRER NAME                NOS OF COURSES ENQUIRED             NAMES OF THOSE");
+            Console.WriteLine(Enquirer1_name + Enquirer1 + Enquirer1_course_name);
+            Console.WriteLine(Enquirer2_name + Enquirer2 + Enquirer2_course_name);
+            Console.WriteLine(Enquirer3_name + Enquirer3 + Enquirer3_course_name);
+            Console.ReadLine();
+        }
+
+
+
+    }
+}

@@ -1,0 +1,11 @@
+D:\Practice\Assignment\12NOV\bin\Debug\netcoreapp2.1\12NOV.deps.json
+D:\Practice\Assignment\12NOV\bin\Debug\netcoreapp2.1\12NOV.runtimeconfig.json
+D:\Practice\Assignment\12NOV\bin\Debug\netcoreapp2.1\12NOV.runtimeconfig.dev.json
+D:\Practice\Assignment\12NOV\bin\Debug\netcoreapp2.1\12NOV.dll
+D:\Practice\Assignment\12NOV\bin\Debug\netcoreapp2.1\12NOV.pdb
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.csproj.CoreCompileInputs.cache
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.AssemblyInfoInputs.cache
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.AssemblyInfo.cs
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.dll
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.pdb
+D:\Practice\Assignment\12NOV\obj\Debug\netcoreapp2.1\12NOV.csprojAssemblyReference.cache
