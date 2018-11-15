@@ -1,0 +1,11 @@
+D:\Practice\C_sharp\15Nov_Practice\bin\Debug\netcoreapp2.1\15Nov_Practice.deps.json
+D:\Practice\C_sharp\15Nov_Practice\bin\Debug\netcoreapp2.1\15Nov_Practice.runtimeconfig.json
+D:\Practice\C_sharp\15Nov_Practice\bin\Debug\netcoreapp2.1\15Nov_Practice.runtimeconfig.dev.json
+D:\Practice\C_sharp\15Nov_Practice\bin\Debug\netcoreapp2.1\15Nov_Practice.dll
+D:\Practice\C_sharp\15Nov_Practice\bin\Debug\netcoreapp2.1\15Nov_Practice.pdb
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.csproj.CoreCompileInputs.cache
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.AssemblyInfoInputs.cache
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.AssemblyInfo.cs
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.dll
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.pdb
+D:\Practice\C_sharp\15Nov_Practice\obj\Debug\netcoreapp2.1\15Nov_Practice.csprojAssemblyReference.cache
