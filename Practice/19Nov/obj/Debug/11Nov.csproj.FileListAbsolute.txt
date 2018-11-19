@@ -1,0 +1,7 @@
+D:\Practice\C_sharp\11Nov\bin\Debug\11Nov.exe.config
+D:\Practice\C_sharp\11Nov\bin\Debug\11Nov.exe
+D:\Practice\C_sharp\11Nov\bin\Debug\11Nov.pdb
+D:\Practice\C_sharp\11Nov\obj\Debug\11Nov.csprojAssemblyReference.cache
+D:\Practice\C_sharp\11Nov\obj\Debug\11Nov.csproj.CoreCompileInputs.cache
+D:\Practice\C_sharp\11Nov\obj\Debug\11Nov.exe
+D:\Practice\C_sharp\11Nov\obj\Debug\11Nov.pdb
