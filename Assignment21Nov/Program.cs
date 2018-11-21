@@ -8,99 +8,91 @@ namespace Assignment21Nov
 {
     class Program
     {
-        
-
+        int EmpID, EmpSalary;
+        string EmpName;
+        float SalaryAfterHike;
         static void Main(string[] args)
         {
-            SalesMan salesMan = new SalesMan();
-            Manger manger = new Manger();
-
-
-            salesMan.ForSalesMan();
+            Program program = new Program();
+            program.Dispaly();
+        }
+        void Entries()
+        {
+            SalaryAfterHike = 0;
+            Console.WriteLine("Enter the Employee ID");
+            EmpID = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the Emp Nmae");
+            EmpName = Console.ReadLine();
+            Console.WriteLine("Enter the Employee salary");
+            EmpSalary = int.Parse(Console.ReadLine());
+        }
+        void Dispaly()
+        {
+            Entries();
+            SalesMan salesMan = new SalesMan(EmpID, EmpName, EmpSalary);
             salesMan.Display();
-            Console.WriteLine("the salary after hike is :" + salesMan.hike);
-            manger.ForManger();
-            manger.Display();
-            Console.WriteLine("the salary after hike is :" + manger.hike);
+            SalaryAfterHike = salesMan.HikeCalForSalesMan();
+            Console.WriteLine("salary after hike :"+SalaryAfterHike);
 
-            Console.ReadLine();
+            Entries();
+            Manger manger = new Manger(EmpID, EmpName, EmpSalary);
+            manger.Display();
+            SalaryAfterHike = manger.HikeCalForManger();
+            Console.WriteLine("salary after hike :" + SalaryAfterHike);
         }
 
     }
     class Employee
     {
-        int _EmpID;
-        public int EmpSalary;
-        string _EmpName;
+        internal int _EmpID;
+        internal int _EmpSalary;
+        internal string _EmpName;
         
         int EmpID { get { return _EmpID; } }
+        int EmpSalary { set { EmpSalary = value; }get { return EmpSalary; } }
         string EmpName { get { return _EmpName; } }
 
         public Employee() { }
-        public Employee(int Empid,string EmpName,int Empsalary)
+        public Employee(int Empid,string EmpName,int EmpSalary)
         {
             _EmpID = Empid;
             _EmpName = EmpName;
-            this.EmpSalary = Empsalary;
-        }
-        public void Enterdetails()
-        {
-            Console.WriteLine("Enter the Employee ID");
-            int Empid = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the Emp Nmae");
-            string Name = Console.ReadLine();
-            Console.WriteLine("Enter the Employee salary");
-            int Empsalary = int.Parse(Console.ReadLine());
+            _EmpSalary = EmpSalary;
         }
         public void Display()
         {
-            Console.WriteLine("name :"+ _EmpName + "id :"+ _EmpID +"salary :"+ EmpSalary);
+            Console.WriteLine("Emp Name :"+ _EmpName+"Emp ID :"+_EmpID+"Emp Salary :"+_EmpSalary);
         }
             
     }
 
     class SalesMan : Employee
     {
-        public double hike;
-        public int SalesManSalary;
+        float hike =0;
+        int SalesManSalary;
         
-        public void EnterSalesManDetails()
-        {
-            Enterdetails();
-            SalesManSalary = EmpSalary;
-        }
         public SalesMan(int Empid, string EmpName, int Empsalary): base(Empid, EmpName, Empsalary)
-        { }
-        public SalesMan() { }
-        public void ForSalesMan()
-        {
-            Console.WriteLine("Enter the Details of Employee");
-            EnterSalesManDetails();
-            hike = SalesManSalary + 1000;
-            hike = hike * .1;
+        { SalesManSalary = Empsalary; }
 
+        public float HikeCalForSalesMan()
+        {
+            hike = SalesManSalary + 1000;
+            return hike = (float)(hike * 10);
         }
     }
 
     class Manger : Employee
     {
-        public double hike;
+        public float hike;
         public int MangerSalary;
 
-        public void EnterMangerDetails()
+        public Manger(int Empid, string EmpName, int Empsalary) : base(Empid, EmpName, Empsalary)
+        { MangerSalary = Empsalary; }
+
+        public float HikeCalForManger()
         {
-            Enterdetails();
-            MangerSalary = EmpSalary;
-        }
-        public Manger(int Empid, string EmpName, int Empsalary) : base(Empid, EmpName,Empsalary)
-        { }
-        public Manger() { }
-        public void ForManger()
-        {
-            Console.WriteLine("Enter the Details of Employee");
-            EnterMangerDetails();
             hike = MangerSalary + 1000;
-            hike = hike * .2;
+            return hike = (float)(hike * 20);
         }
     }
 }
