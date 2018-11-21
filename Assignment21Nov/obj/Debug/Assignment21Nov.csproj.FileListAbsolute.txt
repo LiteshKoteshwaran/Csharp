@@ -1,0 +1,7 @@
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\bin\Debug\Assignment21Nov.exe.config
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\bin\Debug\Assignment21Nov.exe
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\bin\Debug\Assignment21Nov.pdb
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\obj\Debug\Assignment21Nov.csprojAssemblyReference.cache
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\obj\Debug\Assignment21Nov.csproj.CoreCompileInputs.cache
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\obj\Debug\Assignment21Nov.exe
+D:\AspDotNet\Practice\Assignment21Nov\Assignment21Nov\obj\Debug\Assignment21Nov.pdb
